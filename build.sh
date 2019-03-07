@@ -14,7 +14,7 @@ git clone --single-branch --branch v$VJANSSON https://github.com/akheron/jansson
 
 
 echo "Building dependencies..."
-echo "Building jansson"
+echo "Building libjansson"
 pushd jansson
 autoreconf -i
 emconfigure ./configure
@@ -26,7 +26,7 @@ cp src/jansson_config.h $SYSROOT/include
 popd
 
 pushd quiet-dsp
-echo "Building jansson"
+echo "Building libliquid"
 ./bootstrap.sh
 emconfigure ./configure
 emmake make
